@@ -12,7 +12,7 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-set nocompatible
+" set nocompatible
 filetype plugin on
 runtime macros/matchit.vim
 
