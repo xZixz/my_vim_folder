@@ -37,7 +37,7 @@ set grepprg=ack-grep
 set hlsearch
 set ignorecase
 set wildmenu
-set wildmode=list:longest,full
+set wildmode=list:longest,longest
 
 " mapping keys moving between windows
 map <C-J> <C-W>j<C-W>_
@@ -53,10 +53,20 @@ autocmd QuickFixCmdPost [^l]* cwindow
 autocmd QuickFixCmdPost l*    lwindow
 augroup END
 
-"solarize theme
-syntax enable
-set background=dark
-colorscheme solarized
-
 "Add simple highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
+
+"Color scheme
+colorscheme railscasts
+
+"Autocomplete setup
+set complete=.,b,u,]
+set completeopt=menu,preview
+set omnifunc=syntaxcomplete#Complete
+
+"Turn off warning when open another file without saving current file
+set hidden
+
+"Map NERDTREE keys
+nmap <leader>ne :NERDTree<cr>
+nmap <leader><Bar> :NERDTreeFind<cr>
