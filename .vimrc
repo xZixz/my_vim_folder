@@ -68,5 +68,8 @@ set omnifunc=syntaxcomplete#Complete
 set hidden
 
 "Map NERDTREE keys
-nmap <leader>ne :NERDTree<cr>
+nmap <leader>ne :NERDTreeToggle<cr>
 nmap <leader><Bar> :NERDTreeFind<cr>
+
+"Set tag path
+set tags=./tags
